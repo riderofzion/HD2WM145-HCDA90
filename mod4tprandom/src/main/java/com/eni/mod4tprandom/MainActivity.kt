@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         editTextMin = findViewById(R.id.editTextMin);
         editTextMax = findViewById(R.id.editTextMax);
         buttonGenerate = findViewById(R.id.buttonGenerate);
+
         //Lors du clic sur le bouton Generate, je génère un nombre aléatoire entre min et max
         buttonGenerate.setOnClickListener {
             try {

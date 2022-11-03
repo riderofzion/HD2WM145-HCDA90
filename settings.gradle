@@ -16,3 +16,4 @@ rootProject.name = "ProjetAndroid"
 include ':module2ui'
 include ':module4demo'
 include ':mod4tprandom'
+include ':module4databinding'
