@@ -18,5 +18,9 @@
         android:id="@+id/infoFragment"
         android:name="com.eni.mod5nav.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <argument
+            android:name="user"
+            app:argType="com.eni.mod5nav.User" />
+    </fragment>
 </navigation>

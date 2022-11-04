@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">primaryDetailFlow</string>
+    <string name="title_article_detail">Article Detail</string>
+</resources>
