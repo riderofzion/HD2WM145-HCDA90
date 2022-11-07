@@ -25,7 +25,7 @@ class ButtonFragment : Fragment() {
         //Lors du clic sur mon bouton, je me dirige vers le fragment info
         buttonToInfo.setOnClickListener {
             val directionInfo = ButtonFragmentDirections.actionButtonToInfo(User(14,"Michel"))
-            //Navigation.findNavController(view).navig
+            //Navigation.findNavController(view).navigate(R.id.actionButtonToInfo)
             Navigation.findNavController(view).navigate(directionInfo)
         }
 
