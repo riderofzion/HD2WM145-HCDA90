@@ -27,6 +27,18 @@ class RelanceFragment : Fragment() {
             Log.d("RelanceFragment", "La permission d'envoi SMS a été refusée ")
         }
     }
+    val multiplePermissions = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions())
+    { mapsPermissionsGranted : Map<String, Boolean> ->
+        if(mapsPermissionsGranted[Manifest.permission.SEND_SMS] == true){
+            sendSms()
+        }
+        else {
+            // access to the camera is denied, the user has rejected the request
+            Log.d("RelanceFragment", "La permission d'envoi SMS a été refusée ")
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,6 +55,9 @@ class RelanceFragment : Fragment() {
             //} else {
             tel = view.findViewById<EditText>(R.id.editTextPhone).text.toString()
             singlePermission.launch(Manifest.permission.SEND_SMS)
+            //multiplePermissions.launch(
+            //    arrayOf(Manifest.permission.SEND_SMS,Manifest.permission.CALL_PHONE)
+            //)
             //}
         }
     }
