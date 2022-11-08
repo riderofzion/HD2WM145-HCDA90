@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.ToggleButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //ON va écrire du code ici :D
         val textView = findViewById<TextView>(R.id.textView)
-        val button = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.buttonPlus2)
         button.setOnClickListener {
             textView.text = "J'ai appuyé sur le bouton :D"
         }

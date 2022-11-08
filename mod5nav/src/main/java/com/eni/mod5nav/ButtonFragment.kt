@@ -21,7 +21,7 @@ class ButtonFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val buttonToInfo = view.findViewById<Button>(R.id.button)
+        val buttonToInfo = view.findViewById<Button>(R.id.buttonPlus2)
         //Lors du clic sur mon bouton, je me dirige vers le fragment info
         buttonToInfo.setOnClickListener {
             val directionInfo = ButtonFragmentDirections.actionButtonToInfo(User(14,"Michel"))

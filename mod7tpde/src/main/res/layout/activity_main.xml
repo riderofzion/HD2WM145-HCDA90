@@ -74,12 +74,12 @@
             app:layout_constraintTop_toBottomOf="@+id/button6"
             app:layout_constraintVertical_bias="0.5" />
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonThrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Lancer"
+            android:src="@drawable/ic_outline_casino_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCompteur" />

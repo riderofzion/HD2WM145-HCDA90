@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     override fun onClick(view: View?) {
         when (view?.id){
             R.id.button4 -> vm.changeNbSides(4)
-            R.id.button6 -> vm.changeNbSides(6)
+            R.id.buttonPlus2 -> vm.changeNbSides(6)
             R.id.button8 -> vm.changeNbSides(8)
             R.id.button12 ->  vm.changeNbSides(12)
             R.id.buttonThrow -> vm.throwDice()

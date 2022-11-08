@@ -3,6 +3,7 @@ package com.eni.mod7vm
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.eni.mod7vm.databinding.ActivityMainBinding
 
@@ -16,10 +17,18 @@ class MainActivity : AppCompatActivity() {
         vm = ViewModelProvider(this)[CompteurVM::class.java]
 
         binding.vm = vm
+        vm.compteur.observe(this, Observer {
+            //binding.textViewCompteur.text = it.toString()
+            binding.vm = vm
+        })
 
         binding.floatingActionButton.setOnClickListener {
             vm.plusUn()
-            binding.vm = vm
+            //binding.vm = vm
+        }
+        binding.floatingActionButtonPlus2.setOnClickListener {
+            vm.plusDeux()
+            //binding.vm = vm
         }
 
     }
