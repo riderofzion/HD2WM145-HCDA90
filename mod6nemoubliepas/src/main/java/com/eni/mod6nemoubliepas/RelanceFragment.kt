@@ -13,7 +13,7 @@ import android.widget.EditText
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 
-
+private const val TAG = "RelanceFragment"
 class RelanceFragment : Fragment() {
     var tel = ""
     val singlePermission = registerForActivityResult(
@@ -60,8 +60,10 @@ class RelanceFragment : Fragment() {
             //)
             //}
         }
+        Log.i(TAG, "onCreate: FIn du onCreate")
+
     }
-    fun sendSms(){
+    private fun sendSms(){
         val intent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$tel"))
         intent.putExtra("sms_body", "Je te relance")
         startActivity(intent)

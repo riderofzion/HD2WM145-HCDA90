@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 
+private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             arrayOf(Manifest.permission.CALL_PHONE),
             12
         );
-
 
     }
 
