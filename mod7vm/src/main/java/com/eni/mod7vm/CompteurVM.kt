@@ -16,6 +16,6 @@ class CompteurVM : ViewModel() {
         compteur.value = compteur.value?.inc()
     }
     fun plusDeux() {
-        compteur.value = compteur.value?.plus(2)
+        compteur.value= compteur.value?.plus(2)
     }
 }

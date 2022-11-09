@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         vm = ViewModelProvider(this)[DiceVM::class.java]
+        binding.lifecycleOwner = this
         binding.button4.setOnClickListener(this)
         binding.button6.setOnClickListener(this)
         binding.button8.setOnClickListener(this)
@@ -29,11 +30,11 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     override fun onClick(view: View?) {
         when (view?.id){
             R.id.button4 -> vm.changeNbSides(4)
-            R.id.buttonPlus2 -> vm.changeNbSides(6)
+            R.id.button6 -> vm.changeNbSides(6)
             R.id.button8 -> vm.changeNbSides(8)
             R.id.button12 ->  vm.changeNbSides(12)
             R.id.buttonThrow -> vm.throwDice()
         }
-        binding.vm = vm
+        //binding.vm = vm
     }
 }

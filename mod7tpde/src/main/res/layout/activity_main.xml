@@ -84,5 +84,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCompteur" />
 
+        <TextView
+            android:id="@+id/textViewNbFace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{`Nb faces:` + vm.nbSides}"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonThrow"
+            app:layout_constraintStart_toEndOf="@+id/buttonThrow"
+            app:layout_constraintTop_toTopOf="@+id/buttonThrow" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
