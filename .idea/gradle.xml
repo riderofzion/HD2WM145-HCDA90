@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/composetest" />
+            <option value="$PROJECT_DIR$/mod10recyclerview" />
             <option value="$PROJECT_DIR$/mod4tprandom" />
             <option value="$PROJECT_DIR$/mod4tpvraifaux" />
             <option value="$PROJECT_DIR$/mod5nav" />

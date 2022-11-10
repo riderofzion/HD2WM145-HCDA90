@@ -1,15 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
 }
 
 android {
-    namespace 'com.eni.mod9room'
+    namespace 'com.eni.mod10recyclerview'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.eni.mod9room"
+        applicationId "com.eni.mod10recyclerview"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -37,15 +36,6 @@ android {
 }
 
 dependencies {
-    def room_version = "2.4.3"
-    //Room Implementation & processeur annotation
-    implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    //Lifecycle ViewModel kotlin & DB
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'

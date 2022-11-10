@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="restau"
+            type="com.eni.mod10recyclerview.Restaurant" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:singleLine="true"
+            android:text="@{restau.nom}"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBarNote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="RapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizzaRapidPizza" />
+
+        <RatingBar
+            android:id="@+id/ratingBarNote"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:rating="@{restau.ratingStars}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@{restau.type.name()}"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCity"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName"
+            tools:text="Pizzeria-italien-fast-food-kebab-pasta" />
+
+        <TextView
+            android:id="@+id/textViewCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="2"
+            android:text="@{restau.ville}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewType"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBarNote"
+            tools:text="Saint-Herblain-Sud-Loire-Pays-Nantais-France-Europe-Monde-Planète" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
